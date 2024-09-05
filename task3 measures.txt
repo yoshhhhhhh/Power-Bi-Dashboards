@@ -1,0 +1,22 @@
+% of Senior Citizen = DIVIDE(CALCULATE(COUNT('01 Churn-Dataset'[SeniorCitizen]), '01 Churn-Dataset'[SeniorCitizen] = 1, '01 Churn-Dataset'[Churn] = "Yes"), CALCULATE(COUNT('01 Churn-Dataset'[SeniorCitizen]),'01 Churn-Dataset'[Churn] = "Yes"),0) 
+
+
+
+Online Backup in % = DIVIDE(CALCULATE(COUNT('01 Churn-Dataset'[OnlineBackup]),'01 Churn-Dataset'[OnlineBackup] = "Yes" , '01 Churn-Dataset'[Churn] = "Yes"),CALCULATE(COUNT('01 Churn-Dataset'[OnlineBackup]),'01 Churn-Dataset'[Churn] = "Yes"),0)
+
+
+Online Security in % = DIVIDE(CALCULATE(COUNT('01 Churn-Dataset'[OnlineSecurity]),'01 Churn-Dataset'[OnlineSecurity] = "Yes" , '01 Churn-Dataset'[Churn] = "Yes"),CALCULATE(COUNT('01 Churn-Dataset'[OnlineSecurity]),'01 Churn-Dataset'[Churn] = "Yes"),0)
+
+
+
+% of Dependents = DIVIDE(CALCULATE(COUNT('01 Churn-Dataset'[Dependents]), '01 Churn-Dataset'[Dependents] = "Yes", '01 Churn-Dataset'[Churn] = "Yes"), CALCULATE(COUNT('01 Churn-Dataset'[Dependents]),'01 Churn-Dataset'[Churn] = "Yes"),0) 
+
+
+
+% of Partner = DIVIDE(CALCULATE(COUNT('01 Churn-Dataset'[Partner]), '01 Churn-Dataset'[Partner] = "Yes", '01 Churn-Dataset'[Churn] = "Yes"), CALCULATE(COUNT('01 Churn-Dataset'[Partner]),'01 Churn-Dataset'[Churn] = "Yes"),0) 
+
+
+
+churn rate% = DIVIDE(CALCULATE(COUNT('01 Churn-Dataset'[Churn]),'01 Churn-Dataset'[Churn] = "Yes"), CALCULATE(COUNT('01 Churn-Dataset'[Churn]),ALLSELECTED('01 Churn-Dataset'[Churn])))
+
+
